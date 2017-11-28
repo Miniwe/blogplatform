@@ -1,0 +1,90 @@
+{
+    "env": {
+        "es6": true,
+        "browser": true,
+        "node": true,
+        "meteor": true,
+        "mocha": true
+    },
+    "plugins": [
+        "compat",
+        "html",
+        "meteor"
+    ],
+    "extends": ["eslint:recommended", "airbnb/base", "plugin:meteor/recommended", "plugin:react/recommended"],
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "experimentalDecorators": true,
+        "allowJs": true,
+        "ecmaFeatures": {
+            "jsx": true,
+            "arrowFunctions": true,
+            "binaryLiterals": true,
+            "blockBindings": true,
+            "classes": true,
+            "defaultParams": true,
+            "destructuring": true,
+            "experimentalObjectRestSpread": true,
+            "forOf": true,
+            "generators": true,
+            "globalReturn": true,
+            "modules": true,
+            "objectLiteralComputedProperties": true,
+            "objectLiteralDuplicateProperties": true,
+            "objectLiteralShorthandMethods": true,
+            "objectLiteralShorthandProperties": true,
+            "octalLiterals": true,
+            "regexUFlag": true,
+            "regexYFlag": true,
+            "restParams": true,
+            "spread": true,
+            "superInFunctions": true,
+            "templateStrings": true,
+            "unicodeCodePointEscapes": true
+        },
+        "browserslist": {
+            "development": ["last 2 versions"],
+            "production": ["last 4 versions"]
+        }
+    },
+    "globals": {
+        "window": true,
+        "$": true,
+        "console": true,
+        "S3": true,
+        "require": true,
+        "Meteor": true,
+        "Mongo": true,
+        "SimpleSchema": true
+    },
+    "rules": {
+        "array-bracket-spacing": [2, "always"],
+        "arrow-spacing": 2,
+        "arrow-parens": 0,
+        "block-scoped-var": 0,
+        "compat/compat": 2,
+        "no-undef": [2],
+        "meteor/no-template-lifecycle-assignment": 0,
+        "meteor/no-session": 0,
+        "react/jsx-uses-react": "error",
+        "react/jsx-uses-vars": "error",
+        "import/no-unresolved": [0, { "commonjs": true, "amd": true }],
+        "import/extensions": 0,
+        "import/no-extraneous-dependencies": 0,
+        "comma-dangle": 0,
+        "no-unused-vars": [2, {
+            "varsIgnorePattern": "uniforms"
+        }],
+        "class-methods-use-this": [2, { "exceptMethods": [
+            "componentDidMount",
+            "componentDidUpdate",
+            "componentWillMount",
+            "componentWillReceiveProps",
+            "componentWillUnmount",
+            "componentWillUpdate",
+            "render",
+            "shouldComponentUpdate"
+        ] }]
+    }
+}

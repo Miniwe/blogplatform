@@ -1,0 +1,8 @@
+{
+    "indent_size": 2,
+    "indent_with_tabs": false,
+    "end_with_newline": true,
+    "max_preserve_newlines": 4,
+    "space_after_anon_function": true,
+    "bracepadding": false
+}
