@@ -8,7 +8,7 @@ import Model from './model';
 
 const PAGE_SIZE = 20;
 
-const Posts = new Mongo.Collection('Posts', {
+const Contractors = new Mongo.Collection('Contractors', {
   transform(item) {
     return new Model(item);
   }
@@ -18,7 +18,7 @@ const prepareQuery = (query) => {
   const preparedQuery = {};
   if (query.name) {
     const regex = new RegExp(eval('/' + query.name.split(' ').join('|') + '/i'));
-    preparedQuery.$or = [ { title: { $regex: regex } } ];
+    preparedQuery.$or = [ { name: { $regex: regex } } ];
   }
   if (query.except) {
     if (query.except._id) {
@@ -48,7 +48,7 @@ const prepareParams = (params) => {
   return preparedParams;
 };
 
-extend(Posts, {
+extend(Contractors, {
   getSchema(name) {
     let schema;
     switch (name) {
@@ -72,20 +72,20 @@ extend(Posts, {
   }
 });
 
-Posts.allow({
+Contractors.allow({
   insert: () => false,
   update: () => false,
   remove: () => false,
 });
 
-Posts.deny({
+Contractors.deny({
   insert: () => true,
   update: () => true,
   remove: () => true,
 });
 
-Posts.attachSchema(MainSchema, { selector: { type: 'main' } });
-Posts.attachSchema(ListSchema, { selector: { type: 'list' } });
-Posts.attachSchema(ViewSchema, { selector: { type: 'view' } });
+Contractors.attachSchema(MainSchema, { selector: { type: 'main' } });
+Contractors.attachSchema(ListSchema, { selector: { type: 'list' } });
+Contractors.attachSchema(ViewSchema, { selector: { type: 'view' } });
 
-export default Posts;
+export default Contractors;

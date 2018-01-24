@@ -2,9 +2,11 @@ import { ValidatedMethod } from 'meteor/mdg:validated-method';
 import rateLimit from '../../modules/rate-limit.js';
 
 import postsFixtures from '../../api/posts/fixtures';
+import contractorsFixtures from '../../api/contractors/fixtures';
 
 Meteor.startup(() => {
   postsFixtures(61);
+  contractorsFixtures(61);
 });
 
 
@@ -16,6 +18,9 @@ const resetTable = new ValidatedMethod({
   },
   run({ table, count }) {
     switch (table) {
+      case 'contractors':
+        contractorsFixtures(count);
+        break;
       case 'posts':
         postsFixtures(count);
         break;

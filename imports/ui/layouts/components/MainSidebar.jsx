@@ -1,49 +1,48 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { Roles } from 'meteor/alanning:roles';
 import { Sidebar, Menu, Icon } from 'semantic-ui-react';
 
 const tablesProcess = [
   {
-    label: "Dashboard",
-    icon: "fa-user"
+    label: 'Dashboard',
+    icon: 'fa-address-book',
   },
   {
-    label: "Projects",
-    icon: "fa-user"
+    label: 'Projects',
+    icon: 'fa-free-code-camp',
   },
   {
-    label: "Clients",
-    icon: "fa-user"
+    label: 'Clients',
+    icon: 'fa-user',
   },
   {
-    label: "Сontractors",
-    icon: "fa-user accent-text"
+    label: 'Contractors',
+    icon: 'fa-bath accent-text',
   },
   {
-    label: "Posts",
-    icon : "fa-user accent-text"
+    label: 'Posts',
+    icon: 'fa-window-close-o  accent-text',
   },
   {
-    label: "Attribuite",
-    icon: "fa-user"
+    label: 'Attribuite',
+    icon: 'fa-american-sign-language-interpreting',
   },
   {
-    label: "Statistics",
-    icon: "fa-user"
+    label: 'Statistics',
+    icon: 'fa-bar-chart',
   },
   {
-    label: "Documents",
-    icon: "fa-user"
+    label: 'Documents',
+    icon: 'fa-bomb',
   },
   {
-    label: "Help",
-    icon: "fa-user"
+    label: 'Help',
+    icon: 'fa-question-circle',
   },
   {
-    label: "Profile",
-    icon: "fa-user"
+    label: 'Profile',
+    icon: 'fa-cubes',
   },
 ];
 
@@ -66,16 +65,7 @@ class MainSidebar extends Component {
 
   render() {
     return (
-      <Sidebar
-        as={Menu}
-        animation='overlay'
-        color='grey'
-        width='thin'
-        visible={this.props.visible}
-        vertical
-        inverted
-      >
-
+      <Sidebar as={Menu} animation='overlay' color='grey' width='thin' visible={this.props.visible} vertical inverted>
         {tablesProcess.map((item, index) => (
           <Menu.Item
             active={this.state.activeItem === item.label}
@@ -87,7 +77,6 @@ class MainSidebar extends Component {
             <span className={classnames('fa', item.icon)} /> {item.label}
           </Menu.Item>
         ))}
-
       </Sidebar>
     );
   }

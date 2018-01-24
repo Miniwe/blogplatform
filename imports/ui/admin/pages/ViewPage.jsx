@@ -32,7 +32,7 @@ class ViewPage extends Component {
         <Grid stackable>
           <Grid.Row>
             <Grid.Column width={14}>
-              <Header as='h3'>View {this.props.prefix}</Header>
+              <Header as='h3'>View <strong style={{ 'text-transform': 'uppercase' }}>{this.props.prefix}</strong></Header>
             </Grid.Column>
             <Grid.Column width={2}>
               <Button.Group fluid floated='right'>

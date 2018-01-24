@@ -13,7 +13,7 @@ class NewPage extends Component {
   render() {
     return (
       <div>
-        <Header as='h3'>New {this.props.prefix}</Header>
+        <Header as='h3'>New <strong style={{ 'text-transform': 'uppercase' }}>{this.props.prefix}</strong></Header>
         <ItemContainer schema="main" component={FormItem} {...this.props} />
       </div>
     );

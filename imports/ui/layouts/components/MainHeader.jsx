@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import {Roles} from 'meteor/alanning:roles';
 import { Menu, Segment, Container, Image, Icon } from 'semantic-ui-react';
 
 class MainHeader extends Component {

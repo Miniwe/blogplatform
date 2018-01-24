@@ -42,8 +42,9 @@ class MainLayout extends Component {
           <Sidebar.Pusher>
             <Container>
               <Switch>
-                <Route exact name='Index' path='/' component={Index} />
-                <Route path='/posts' component={AdminRouters} {...this.props} />
+              <Route path='/posts' component={AdminRouters} {...this.props} />
+              <Route path='/contractors' component={AdminRouters} {...this.props} />
+              <Route name='Index' path='/' component={Index} />
               </Switch>
             </Container>
             <MainFooter />

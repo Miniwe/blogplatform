@@ -15,7 +15,7 @@ class EditPage extends Component {
     let {id} = this.props.match.params;
     return (
       <div>
-        <Header as='h3'>Edit {this.props.prefix}</Header>
+        <Header as='h3'>Edit <strong style={{ 'text-transform': 'uppercase' }}>{this.props.prefix}</strong></Header>
         <ItemContainer schema="main" component={FormItem} itemId={id} {...this.props} />
       </div>
     );

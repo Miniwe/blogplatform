@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import extend from 'lodash/extend';
 import { withTracker } from 'meteor/react-meteor-data';
 import { Loader } from 'semantic-ui-react';
-import Posts from '../../api/posts/collection';
+import {getCollection} from '../../modules/import-collection';
 
 class _ItemContainer extends Component {
   static = {
@@ -50,11 +50,11 @@ class _ItemContainer extends Component {
   }
 }
 
-export default (ItemContainer = withTracker((props) => {
+export default(ItemContainer = withTracker((props) => {
   const {} = props;
   const collectionHandle = Meteor.subscribe(`${props.prefix}.single`, props.itemId);
   const loading = !collectionHandle.ready();
-  const collection = Posts;
+  const collection = getCollection(props.prefix);
   const list = !loading ? collection.find(props.itemId).fetch() : []
   return extend({
     loading,
