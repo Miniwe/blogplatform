@@ -1,3 +1,40 @@
 /*******************************
          Site Overrides
 *******************************/
+
+@headerHeight: 5.2em;
+
+.ui.segment {
+
+  &.pushable.app-body {
+    min-height: 100vh;
+
+    > .sidebar, > .pusher {
+      padding-top: @headerHeight !important;
+    }
+  }
+
+  &.no-padded {
+    padding: 0;
+  }
+
+  &.summary {
+
+      box-shadow: none;
+
+      h4.ui.header {
+        color: #64be84;
+        padding: 0.6em;
+        box-shadow: 0px 2px 0px 0px #64be84;
+        margin: 0 -0.6em;
+      }
+
+      h5 {
+        color: #b56f0f;
+        padding: 0 0.8em;
+      }
+    }
+
+
+}
+

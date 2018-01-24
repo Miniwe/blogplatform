@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import {Roles} from 'meteor/alanning:roles';
 import { Menu, Segment, Container, Image, Icon } from 'semantic-ui-react';
 
 class MainHeader extends Component {
@@ -12,21 +13,20 @@ class MainHeader extends Component {
 
   render() {
     const { activeItem } = this.state;
-
     return (
-      <Menu fixed='top' size='large'>
-        <Container>
-          <Menu.Item style={{ background: '#ff0000', color: '#ffffff' }} header>
-            Blog Name
+      <Menu className='MainHeader' fixed='top' size='large'>
+        <Container fluid>
+          <Menu.Item className='main-logo' header>
+            <Image src='/img/logo.png' alt='Sintec ' />
           </Menu.Item>
-          <Menu.Menu position='left' className='mobile hidden'>
-            <Menu.Item name='index' href='/' active={activeItem === 'index'}
-              onClick={this.handleItemClick}>
-              Index
+          <Menu.Menu position='left'>
+            <Menu.Item name='toc' onClick={this.props.toggleVisibility} className='toc'>
+              <i className='fa fa-bars'></i>
             </Menu.Item>
-            <Menu.Item name='posts' href='/posts' active={activeItem === 'posts'}
-              onClick={this.handleItemClick}>
-              Posts
+          </Menu.Menu>
+          <Menu.Menu position='right'>
+            <Menu.Item name='profile' href='/profile' active={activeItem === 'profile'} onClick={this.handleItemClick}>
+              UserName
             </Menu.Item>
           </Menu.Menu>
         </Container>

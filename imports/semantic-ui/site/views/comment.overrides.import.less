@@ -1,3 +1,59 @@
 /*******************************
     User Variable Overrides
 *******************************/
+
+.ui.comments .comment .text.avatar {
+  margin: 0em 0.25rem 0em 0em;
+}
+
+.ui.comments .comment .nested.text {
+  margin-top: 0;
+  border-top: none;
+}
+
+.nested {
+  border: 0.1em dashed #ccc;
+  padding: 0 0 0 1em;
+
+  &.hidden {
+    display: none !important;
+    overflow: hidden !important;
+    visibility: hidden !important;
+  }
+
+  &.text {
+    margin-bottom: 0.5em !important;
+    padding-top: 0.5em !important;
+    padding-bottom: 0.5em !important;
+  }
+
+  .nested {
+    border-right: none;
+    padding: 0 0 0 1em;
+  }
+
+  &.source {
+    border: none;
+    padding: 0;
+  }
+
+  &.ui.comments {
+    max-width: 100%;
+    .comment {
+      padding-top: 0;
+    }
+
+    .handler {
+      &:hover {
+        color: green;
+        cursor: move;
+      }
+    }
+  }
+}
+
+.ui.comments.dest.nested {
+  .item {
+    padding: 8px;
+  }
+}

@@ -1,18 +1,14 @@
 {
-  "name": "blogplatform",
+  "name": "sintec",
   "private": true,
   "scripts": {
     "start": "meteor run"
   },
   "dependencies": {
+    "amplify": "github:mikehostetler/amplify",
     "babel-runtime": "^6.26.0",
     "bcrypt": "^1.0.3",
     "classnames": "^2.2.5",
-    "datatables.net-fixedheader-se": "^3.1.3",
-    "datatables.net-responsive": "^2.2.1",
-    "datatables.net-responsive-se": "^2.2.1",
-    "datatables.net-rowgroup": "^1.0.2",
-    "datatables.net-se": "^1.10.16",
     "fs": "0.0.1-security",
     "history": "^4.7.2",
     "lodash": "^4.17.4",
@@ -53,5 +49,12 @@
         ]
       }
     }
+  },
+  "depricated": {
+    "datatables.net-fixedheader-se": "^3.1.3",
+    "datatables.net-responsive": "^2.2.1",
+    "datatables.net-responsive-se": "^2.2.1",
+    "datatables.net-rowgroup": "^1.0.2",
+    "datatables.net-se": "^1.10.16"
   }
 }

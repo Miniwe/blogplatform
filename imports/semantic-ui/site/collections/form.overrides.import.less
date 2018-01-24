@@ -1,3 +1,18 @@
 /*******************************
          Site Overrides
 *******************************/
+
+.ui.form .grouped.fields.no-grouped {
+  display: flex;
+  flex-flow: wrap;
+
+  &.pages {
+    .pfield {
+      display: none !important;
+    }
+  }
+}
+
+.ui.input input[type=text] {
+  color: inherit;
+}

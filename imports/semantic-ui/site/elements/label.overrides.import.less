@@ -1,3 +1,41 @@
 /*******************************
          Site Overrides
 *******************************/
+
+
+.ui.tag.labels .label,
+.ui.tag.label {
+  margin-left: 0 !important;
+  margin-right: 2em;
+  font-size: 0.46em;
+}
+.ui.tag.labels .label:before,
+.ui.tag.label:before {
+    transform: translateY(-50%) translateX(50%) rotate(-45deg);
+
+    right: 0;
+    left: @tagTriangleRightOffset;
+
+    background-color: inherit;
+    background-image: @tagTriangleBackgroundImage;
+
+    width: @tagTriangleSize;
+    height: @tagTriangleSize;
+    margin-left: -@tagTriangleSize;
+    transition: @tagTransition;
+}
+
+
+.ui.tag.labels .label:after,
+.ui.tag.label:after {
+  right: -(@tagCircleSize / 2);
+  left: auto;
+}
+
+.itemsLabel {
+  background: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  font-weight: normal;
+  border-top: 1px dashed #eee;
+  font-size: 0.85em;
+}

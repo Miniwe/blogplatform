@@ -1,6 +1,6 @@
 # README #
 
-Base Blog Platform
+Sintec Platform
 
 ### Dev Infrastructure ###
 * Preferred IDE: __Microsoft Visual Studio Code__
